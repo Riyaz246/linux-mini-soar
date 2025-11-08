@@ -33,8 +33,8 @@ First, I configured two VirtualBox VMs on a host-only network.
 
 (I also had to install `openssh-server` on the minimized Ubuntu victim, as it wasn't included by default.)
 
-![Victim IP Setup](Screenshot-2025 11-06 125655.png)
-![Installing SSH Server](Screenshot 2025-11-06 130404.png)
+![Victim IP Setup](Screenshot%2025-11-06%125655.png)
+![Installing SSH Server](Screenshot_2025-11-06_130404.png)
 
 ### 2. Reconnaissance & Attack
 
