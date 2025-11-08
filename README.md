@@ -33,8 +33,8 @@ First, I configured two VirtualBox VMs on a host-only network.
 
 (I also had to install `openssh-server` on the minimized Ubuntu victim, as it wasn't included by default.)
 
-![Victim IP Setup](Screenshot%2025-11-06%125655.png)
-![Installing SSH Server](Screenshot_2025-11-06_130404.png)
+![Victim IP Setup](Screenshot%202025-11-06%20125655.png)
+![Installing SSH Server](Screenshot%202025-11-06%20130404.png)
 
 ### 2. Reconnaissance & Attack
 
@@ -47,19 +47,19 @@ From the Kali VM, I confirmed connectivity with `ping` and used `nmap` to verify
 
 By manually inspecting the logs on the Ubuntu server, I could see the `hydra` attack in real-time. This is the log data our script needs to find.
 
-![Manual Log Hunt](Screenshot-2025-11-06-134238.png)
+![Manual Log Hunt](Screenshot%202025-11-06%20134238.png)
 
 ### 4. The "Detection-as-Code" (The Script)
 
 This is the core logic of the detector, written in Bash. It's designed to parse logs and find IPs that cross our `THRESHOLD`.
 
-![The Detector Script](Screenshot-2025-11-06-164142.png)
+![The Detector Script](Screenshot%202025-11-06%20164142.png)
 
 ### 5. Automation: The Root `crontab`
 
 To make this a true "SOAR," I added the script to the system's root `crontab` to run every single minute.
 
-![Root Crontab](Screenshot-2025-11-06-170509.png)
+![Root Crontab](Screenshot%202025-11-06%20170509.png)
 
 ### 6. FINAL RESULT: Automated Detection & Response!
 
@@ -71,4 +71,4 @@ The final screenshot shows the `detector.log` file being updated in real-time. T
 
 The system works exactly as designed.
 
-![Live Detection Log](Screenshot-2025-11-06-171222.png)
+![Live Detection Log](Screenshot%202025-11-06%20171222.png)
